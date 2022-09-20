@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container text-center">
+        <h3>DOM DEMO</h3>
+    </div>
+
+    
+
+    <ul id="button_container" class="container text-center">
+        <li>
+            <a id="demo_button_hide" type="button" class="btn btn-outline-info">Click here to hide</a>
+            <a id="demo_button_show" type="button" class="btn btn-outline-info">Click here to show</a>
+          
+        </li>
+    </ul>
+
+    <!-- Input Fields  -->
+
+    <div class="container col-md-4">
+        <div id="demo_input_container" class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">DEMO INPUT FIELD</label>
+            <input type="number" class="form-control" id="demo_input" placeholder="0">
+        </div>
+    </div>
+
+
+
+                    <!-- RADIO BUTTONS -->
+    <div id="radio_button_container" class="radio-btns container text-center">
+        <input id="option_1" type="radio" class="btn-check" name="radio_button_container" autocomplete="off">
+        <label class="btn btn-secondary" for="option_1">Same as input</label>
+    
+        <input id="option_2" type="radio" class="btn-check" name="radio_button_container" autocomplete="off">
+        <label class="btn btn-secondary" for="option_2">Double the number</label>
+
+    </div>
+
+
+                     <!-- READ ONLY FIELDS / OUTPUTS -->
+    <div class="container col-md-4">
+        <div id="output_A_container" class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">OUTPUT A</label>
+            <input type="text" class="form-control" id="output_A" placeholder="0" readonly>
+        </div>
+        <div id="output_B_container" class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">OUTPUT B</label>
+            <input type="text" class="form-control" id="output_B" placeholder="0" readonly>
+        </div>
+    </div>
+
+
+
+    
+
+
+    
+</body>
+</html>
