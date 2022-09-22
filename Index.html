@@ -18,11 +18,11 @@
 
     
 
-    <ul id="button_container" class="container text-center">
+    <ul id="button-container" class="container text-center">
         <li>
-            <a id="demo_button_hide" type="button" class="btn btn-outline-info">Click here to hide</a>
-            <a id="demo_button_show" type="button" class="btn btn-outline-info">Click here to show</a>
-            <a id="demo_button_clear" type="button" class="btn btn-outline-info">Click here to clear</a>
+            <a id="demo-button-hide" type="button" class="btn btn-outline-info">Click here to hide</a>
+            <a id="demo-button-show" type="button" class="btn btn-outline-info">Click here to show</a>
+            <a id="demo-button-clear" type="button" class="btn btn-outline-info">Click here to clear</a>
           
         </li>
     </ul>
@@ -30,38 +30,43 @@
     <!-- Input Fields  -->
 
     <div class="container col-md-4">
-        <div id="demo_input_container" class="mb-3">
+        <div id="demo-input-container" class="mb-3">
             <label for="formGroupExampleInput" class="form-label">DEMO INPUT FIELD</label>
-            <input type="number" class="form-control" id="demo_input" placeholder="0">
+            <input type="number" class="form-control" id="demo-input" placeholder="0">
         </div>
     </div>
 
 
+    <div id="radio-button-container" class="container text-center">
+        
+            <button id="double-input-button" type="button" class="btn btn-primary">Double the Number</button>
+          
+        
+    </div>
+
 
                     <!-- RADIO BUTTONS -->
-    <div id="radio_button_container" class="radio-btns container text-center">
-        <input id="option_1" type="radio" class="btn-check" name="radio_button_container" autocomplete="off">
-        <label class="btn btn-secondary" for="option_1">Same as input</label>
+    <!-- <div id="radio_button_container" class="radio-btns container text-center">
     
-        <input id="option_2" type="radio" class="btn-check" name="radio_button_container" autocomplete="off">
-        <label class="btn btn-secondary" for="option_2">Double the number</label>
+        <label class="btn btn-primary" for="button-option-2">Double the number</label>
+        <input id="button-option-2" type="radio" class="btn-check" name="radio_button_container" autocomplete="off">
 
-    </div>
+    </div> -->
 
 
                      <!-- READ ONLY FIELDS / OUTPUTS -->
     <div class="container col-md-4">
-        <div id="output_A_container" class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">OUTPUT A</label>
-            <input type="text" class="form-control" id="output_A" placeholder="0" readonly>
+        <div id="output-A-container" class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">OUTPUT A (Same as input)</label>
+            <input type="text" class="form-control" id="output-A" placeholder="0" readonly>
         </div>
-        <div id="output_B_container" class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">OUTPUT B</label>
-            <input type="text" class="form-control" id="output_B" placeholder="0" readonly>
+        <div id="output-B-container" class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">OUTPUT B (Double the input)</label>
+            <input type="text" class="form-control" id="output-B" placeholder="0" readonly>
         </div>
-        <div id="output_C_container" class="mb-3">
+        <div id="output-C-container" class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">OUTPUT A + B</label>
-            <input type="text" class="form-control" id="output_C" placeholder="0" readonly>
+            <input type="text" class="form-control" id="output-C" placeholder="0" readonly>
         </div>
     </div>
 

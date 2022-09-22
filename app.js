@@ -2,118 +2,119 @@
 // VARIABLES FOR HIDING AND SHOWING 
 ////////////////////////////////////////////////////////////
 
-const demo_input = document.getElementById('demo_input_container')
-const radio_button = document.getElementById('radio_button_container')
-const output_a_hide = document.getElementById('output_A_container')
-const output_b_hide = document.getElementById('output_B_container')
-const output_c_hide = document.getElementById('output_C_container')
+const demoInput = document.getElementById('demo-input-container')
+const radioButton = document.getElementById('radio-button-container')
+const outputContainerA = document.getElementById('output-A-container')
+const outputContainerB = document.getElementById('output-B-container')
+const outputContainerC = document.getElementById('output-C-container')
 
 
 /////////////////////////////////////////////////////////////
-const button_container = document.getElementById('button_container')
-const button_hide = document.getElementById('demo_button_hide')
-const button_clear = document.getElementById('demo_button_clear')
+const buttonContainer = document.getElementById('button-container')
+const buttonHide = document.getElementById('demo-button-hide')
+const buttonClear = document.getElementById('demo-button-clear')
 
 ///////////////////////////////////////////////////////////////
-const option1 = document.getElementById('option_1')
-const option2 = document.getElementById('option_2')
+// const button_option1 = document.getElementById('button-option-1')
+const doubleInput = document.getElementById('double-input-button')
 
-//////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 //input variables
-//////////////////////////////////////
-const input_number = document.getElementById('demo_input')
+/////////////////////////////////////////////////////////////////
+const inputNumber = document.getElementById('demo-input')
 
 
 /////////////////////////////////////////////////////
 // OUTPUT VARIABLES
 ////////////////////////////////////////////////////
-const output_a = document.getElementById('output_A')
-const output_b = document.getElementById('output_B')
-const output_c = document.getElementById('output_C')
+const outputA = document.getElementById('output-A')
+const outputB = document.getElementById('output-B')
+const outputC = document.getElementById('output-C')
 
+///////////////////////////////////////////////////////////////////
+// Functions to hide and show div elements and clear input/output fields
+////////////////////////////////////////////////////////////////////
+
+// NOTE: These functions are defined here but called below,
+// Remember functions must be called in order to have any effect.
 
 
 function hideFields() {
-    demo_input.style.display = 'none'
-    radio_button.style.display = 'none'
-    output_a_hide.style.display = 'none'
-    output_b_hide.style.display = 'none'
-    output_c_hide.style.display = 'none' 
+    demoInput.style.display = 'none'
+    radioButton.style.display = 'none'
+    outputContainerA.style.display = 'none'
+    outputContainerB.style.display = 'none'
+    outputContainerC.style.display = 'none' 
 }
 
 
 function showFields() {
-    demo_input.style.display = 'block'
-    radio_button.style.display = 'block'
-    output_a_hide.style.display = 'block'
-    output_b_hide.style.display = 'block' 
-    output_c_hide.style.display = 'block'
+    demoInput.style.display = 'block'
+    radioButton.style.display = 'block'
+    outputContainerA.style.display = 'block'
+    outputContainerB.style.display = 'block' 
+    outputContainerC.style.display = 'block'
 }
 
 function clearFields(){
-    input_number.value = ''
-    output_a.value = ''
-    output_b.value = ''
-    output_c.value = ''
+    inputNumber.value = ''
+    outputA.value = ''
+    outputB.value = ''
+    outputC.value = ''
 }
 
+///////////////////////////////////////////////////////////////////////
 
-function hide_stuff(){
-    button_container.addEventListener('click', (e) => {
-        if (e.target.id === 'demo_button_hide') {
-            hideFields()
-        }
+
+
+// When the hide button is clicked the hideFields function is called
+
+buttonContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'demo-button-hide') {
+        hideFields()
     }
-)}
+})
 
-function show_stuff(){
-    button_container.addEventListener('click', (e) => {
-        if (e.target.id === 'demo_button_show') {
-            showFields()
-        }
+
+// When the show button is clicked the showFields button is called 
+
+buttonContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'demo-button-show') {
+        showFields()
     }
-)}
+})
 
 
-function reset_values(){
-    button_container.addEventListener('click', (e) => {
-        if (e.target.id === 'demo_button_clear') {
-            clearFields()
-        }
+// When the clear button is clicked the clearFields function is called 
 
-    })
-}
+buttonContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'demo-button-clear') {
+        clearFields()
+    }
+})
 
-//////////////////////////////////////////////////////
-
+////////////////////////////////////////////////////////////////////////////
 
 
-hide_stuff()
-show_stuff()
-reset_values()
 
 
-function doMath(){
-    radio_button.addEventListener('click', (e) => {
-        if (e.target.id === 'option_1') {
-            output_a.value = input_number.value
-        }
-        else if (e.target.id === 'option_2') {
-            output_b.value = output_a.value * 2
-            output_c.value = Number(output_a.value) + Number(output_b.value)  
-        }
-    })
-}
+radioButton.addEventListener('click', (e) => {
+    if (e.target.id === 'double-input-button') {
+        outputB.value = outputA.value * 2
+        outputC.value = Number(outputA.value) + Number(outputB.value)  
+    }
+})
 
-function total(){
-    input_number.addEventListener('input', () => {
-        output_c.value = Number(output_a.value) + Number(output_b.value)  
-    })
-}
 
-input_number.addEventListener('input', () =>{
 
-    output_a.value = input_number.value
+inputNumber.addEventListener('input', () => {
+    outputC.value = Number(outputA.value) + Number(outputB.value)  
+})
+
+
+inputNumber.addEventListener('input', () =>{
+    outputA.value = inputNumber.value
+    outputC.value = Number(outputA.value) + Number(outputB.value)  
 })
 
 
