@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////
-// VARIABLES FOR HIDING AND SHOWING
+// VARIABLES FOR HIDING AND SHOWING 
 ////////////////////////////////////////////////////////////
 
 const demo_input = document.getElementById('demo_input_container')
@@ -96,20 +96,25 @@ reset_values()
 function doMath(){
     radio_button.addEventListener('click', (e) => {
         if (e.target.id === 'option_1') {
-            // number.addEventListener('input')
             output_a.value = input_number.value
         }
         else if (e.target.id === 'option_2') {
-            output_b.value = input_number.value * 2
+            output_b.value = output_a.value * 2
+            output_c.value = Number(output_a.value) + Number(output_b.value)  
         }
     })
 }
 
 function total(){
-    radio_button.addEventListener('click', (e) => {
+    input_number.addEventListener('input', () => {
         output_c.value = Number(output_a.value) + Number(output_b.value)  
     })
 }
+
+input_number.addEventListener('input', () =>{
+
+    output_a.value = input_number.value
+})
 
 
 
