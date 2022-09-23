@@ -94,9 +94,10 @@ buttonContainer.addEventListener('click', (e) => {
 })
 
 ////////////////////////////////////////////////////////////////////////////
+// 
 
 
-
+//This doubles the input numbers value and adds it to the outputB field,
 
 radioButton.addEventListener('click', (e) => {
     if (e.target.id === 'double-input-button') {
@@ -105,12 +106,13 @@ radioButton.addEventListener('click', (e) => {
     }
 })
 
-
+// this updates the outputC whenever the input is changed
 
 inputNumber.addEventListener('input', () => {
     outputC.value = Number(outputA.value) + Number(outputB.value)  
 })
 
+// this updates outputA whenever the input changes and automatically updates outputC as well
 
 inputNumber.addEventListener('input', () =>{
     outputA.value = inputNumber.value
@@ -120,5 +122,3 @@ inputNumber.addEventListener('input', () =>{
 
 
 
-doMath()
-total()
